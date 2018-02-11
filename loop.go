@@ -46,7 +46,7 @@ func loop(data[] int32,len int8) bool {
 		loop(data,len-1)
 		find(data)
 		//fmt.Println(data)
-	}
+	} 
 	return true;
 }
 
