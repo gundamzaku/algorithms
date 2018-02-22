@@ -52,7 +52,7 @@ func hex2bin(value string)[]byte  {
 	dstTmp := make([]byte, hex.EncodedLen(len(value)))
 	hex.Decode(dstTmp, []byte(value))
 	//真他妈坑，和PHP的不一样，这个Byte还要裁剪，否则算出来的值不对
-	dst:=bytes.Trim(dstTmp,"\x00")
+	dst:=bytes.TrimRight(dstTmp,"\x00")
 	return dst
 }
 
@@ -70,7 +70,7 @@ func enSha256(str []byte) string {
 type configBitHead struct {
 	prevBlockHash string
 	rootHash string
-	version int64
+	version string
 	time string
 	bits int64
 	nonce int64
@@ -90,14 +90,14 @@ func main(){
 	var finalHash string
 
 	var config configBitHead
-	config.version = 1
-	config.time = "2011-05-21 17:26:31"
-	config.bits = 440711666
-	config.nonce = 2504433986
-	config.prevBlockHash = "00000000000008a3a41b85b8b29ad444def299fee21793cd8b9e567eab02cd81"
-	config.rootHash  = "2b12fcf1b09288fcaff797d71e950e71ae42b91e8bdb2304758dfcffc2b620e3"
+	config.version = "20000000"
+	config.time = "2018-02-22 08:41:00"
+	config.bits = 392009692
+	config.nonce = 1111548121
+	config.prevBlockHash = "00000000000000000010ddc4fcbf331d5000c431aa6aa474bf38e85f9f1f5788"
+	config.rootHash  = "4018fe3dd8f08ba3fcaf26819cbcdc0a6b3cddd624ef6f07897daf29734b5826"
 
-	version = littleEndian(config.version)
+	version = swapOrder(config.version)
 	time = littleEndian(getUnixTime(config.time))
 	bits = littleEndian(config.bits)
 	nonce = littleEndian(config.nonce)
@@ -105,9 +105,7 @@ func main(){
 	rootHash = swapOrder(config.rootHash)
 
 	headerHex = version+prevBlockHash+rootHash+time+bits+nonce
-
 	dst := hex2bin(headerHex)
-
 	pass1 = string(hex2bin(enSha256(dst)))
 
 	pass2 = enSha256([]byte(pass1))
