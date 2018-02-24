@@ -6,8 +6,8 @@
 ##### 基础排序  
 
 [选择排序（Selection Sort）](https://github.com/gundamzaku/algorithms/blob/master/selectionSort.go)  
-插入排序（Insertion Sort）  
-希尔排序（Shell Sort）
+[插入排序（Insertion Sort）](https://github.com/gundamzaku/algorithms/blob/master/insertionSort.go)  
+[希尔排序（Shell Sort）](https://github.com/gundamzaku/algorithms/blob/master/shellSort.go)
 
 ##### 其它
 非对称加密码(RSA)  
