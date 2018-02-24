@@ -12,6 +12,7 @@
 ##### 其它
 [非对称加密码(RSA)](https://github.com/gundamzaku/algorithms/blob/master/rsa.go)  
 [区块链挖矿算法](https://github.com/gundamzaku/algorithms/blob/master/digmine.go)  
+`关于挖矿原理的[文字说明](https://github.com/gundamzaku/my/blob/master/blockchain_technology/what_is_dig_btc.md)`
 [隐秘等式的问题]()  
 `WWWDOT - GOOGLE = DOTCOM
 每个字母代表十个阿拉伯数字中的一个且各不相同，每个六位数字最高位都不是0`
