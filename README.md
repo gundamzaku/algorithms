@@ -1,7 +1,11 @@
 # algorithms
 算法的实现（go语言版)学习笔记
 
-#### 2018年2月24日
+#### 2018年2月26日
+
+##### 归并排序  
+`应该就是分治算法排序，功能与下面略同，代码不同，`  
+[自顶向下归并排序](https://github.com/gundamzaku/algorithms/blob/master/mergeSort.go)  
 
 ##### 基础排序  
 
