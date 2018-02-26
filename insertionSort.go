@@ -2,7 +2,7 @@ package main
 
 import (
 	"elementarySort"
-) 
+)
 
 type InsertionSort struct {
 	elementarySort.ElementarySort
