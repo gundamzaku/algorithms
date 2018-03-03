@@ -6,6 +6,8 @@
 ##### 归并排序  
 `应该就是分治算法排序，功能与下面略同，代码不同，`  
 [自顶向下归并排序](https://github.com/gundamzaku/algorithms/blob/master/mergeSort.go)  
+[自下向顶归并排序](https://github.com/gundamzaku/algorithms/blob/master/mergeSort.go)  
+`其实是同一段代码，实现两个功能`
 
 ##### 基础排序  
 
